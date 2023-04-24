@@ -35,6 +35,6 @@ int print_STR(va_list val);
 int print_pointer(va_list val);
 int print_rev(va_list lis);
 int print_rot13(va_list l);
-
+int _putchar(char c);
 
 #endif
