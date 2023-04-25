@@ -2,14 +2,14 @@
 
 /**
  * print_rev - prints a string in reverse
- * @l: argument from _printf
+ * @lis: argument from _printf
  * Return: length of the printed string
  */
 
-int print_rev(va_list l)
+int print_rev(va_list lis)
 {
 	int i = 0, j;
-	char *s = va_arg(l, char *);
+	char *s = va_arg(lis, char *);
 
 	if (!s)
 		s = "(null)";

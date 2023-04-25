@@ -1,19 +1,20 @@
 #include "main.h"
 
 /**
- * printf_hex - Prints a representation of a decimal number on base 16 lowercase
- * @list: List of the arguments passed to the function
+ * printf_hex - Prints a representation of a decimal
+ * number on base 16 lowercase
+ * @l: List of the arguments passed to the function
  * Return: Number of caractres printed
  */
 
-int print_hex(va_list list)
+int print_hex(va_list l)
 {
 	unsigned int num;
 	int len, rem_num;
 	char *hex_rep;
 	char *rev_hex;
 
-	num = va_arg(list, unsigned int);
+	num = va_arg(l, unsigned int);
 
 	if (num == 0)
 		return (_putchar('0'));

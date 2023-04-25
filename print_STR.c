@@ -16,7 +16,7 @@ int print_STR(va_list val)
 		return (_puts(NULL_STRING));
 	for (; *s; s++)
 	{
-		if(isNonAlphaNumeric(*s))
+		if(is_non_alpha_num(*s))
 		{
 			count += _puts("\\x");
 			res = convert(*s, 16, 0);
@@ -31,39 +31,39 @@ int print_STR(va_list val)
 }
 
 /**
- * isNonAlphaNumeric - determines if char is non-
+ * is_non_alpha_num - determines if char is non-
  * alphanumeric char on ASCII table
  * @c: input char
  * Return: true or false
  */
 
-int isNonAlphaNumeric(char c)
+int is_non_alpha_num(char c)
 {
 	return ((c > 0 && c < 32) || c >= 127);
 }
 
 /**
  * convert - convert number and base into string
- * @num: input number
- * @base: input base
- * @lowercase: flag if hexa values need to be lowercase
+ * @n: input number
+ * @b: input base
+ * @lc: flag if hexa values need to be lowercase
  * Return: result string
  */
 
-char *convert(unsigned long int num, int base, int lowercase)
+char *convert(unsigned long int n, int b, int l)
 {
 	static char *rep;
 	static char buffer[50];
 	char *p;
 
-	rep = (lowercase)
+	rep = (lc)
 		? "0123456789abcdef"
 		: "0123456789ABCDEF";
 	p = &buffer[49];
 	*p = NULL;
 	do {
-		*--p = rep[num % base];
-		num /= base;
+		*--p = rep[n % b];
+		n /= b;
 	}while (num);
 
 	return (p);

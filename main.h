@@ -49,4 +49,5 @@ int hex_check(int n, char x);
 int print_hexau(unsigned long int num);
 int is_non_alpha_num(char c);
 char *convert(unsigned long int n, int b, int lc);
+int _puts(char *str);
 #endif
