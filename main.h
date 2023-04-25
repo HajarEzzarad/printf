@@ -21,7 +21,7 @@ struct convert
 typedef struct convert conver_t;
 
 int _printf(const char *format, ...);
-int format_reciever(const char *format, conver_t list[], va_list argl);
+int format_receiver(const char *format, conver_t list[], va_list argl);
 int print_per(va_list);
 int print_int(va_list);
 int print_char(va_list);

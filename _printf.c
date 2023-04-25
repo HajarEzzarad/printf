@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_start(argl, format);
-	print_char = format_reciever(format, list, argl);
+	print_char = format_receiver(format, list, argl);
 	va_end(argl);
 	return (print_char);
 }
