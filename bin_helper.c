@@ -33,7 +33,7 @@ char *reverse_string(char *str)
 		return (NULL);
 
 	_memcpy(dest, str, len);
-	for (j = 0; j < len; j++; len--)
+	for (j = 0; j < len; j++, len--)
 	{
 		tmp = dest[len - 1];
 		dest[len - 1] = dest[j];
