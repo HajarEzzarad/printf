@@ -28,7 +28,7 @@ int print_oct(va_list l)
 		n = n / 8;
 	}
 	oc[leng] = '\0';
-	rev_str = rev_string(oc);
+	rev_str = reverse_string(oc);
 	if (rev_str == NULL)
 		return (-1);
 	write_base(rev_str);
