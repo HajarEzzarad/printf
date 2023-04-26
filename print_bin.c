@@ -18,10 +18,10 @@ int print_bin(va_list list)
 		return (_putchar('0'));
 	if (num < 1)
 		return (-1);
-	len = base_len(num, 2);
+	len = len(num, 2);
 	str = malloc(sizeof(char) * len + 1);
 	if (str == NULL)
-		return (-1)
+		return (-1);
 	
 	for (i = 0; num > 0; i++)
 	{
