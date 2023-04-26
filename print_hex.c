@@ -10,7 +10,7 @@
 int print_hex(va_list l)
 {
 	unsigned int num;
-	int len, rem_num;
+	int leng, rem_num;
 	char *hex_rep;
 	char *rev_hex;
 
@@ -20,28 +20,28 @@ int print_hex(va_list l)
 		return (_putchar('0'));
 	if (num < 1)
 		return (-1);
-	len = len(num, 16);
-	hex_rep = malloc(sizeof(char) * len +1);
+	leng = len(num, 16);
+	hex_rep = malloc(sizeof(char) * leng +1);
 	if (hex_rep == NULL)
 		return (-1);
-	for (len = 0; num > 0; len++)
+	for (leng = 0; num > 0; leng++)
 	{
 		rem_num = num % 16;
 		if (rem_num > 9)
 		{
 			rem_num = hex_check(rem_num, 'x');
-			hex_rep[len] = rem_num;
+			hex_rep[leng] = rem_num;
 		}
 		else
-			hex_rep[len] = rem_num + 48;
+			hex_rep[leng] = rem_num + 48;
 		num = num / 16;
 	}
-	hex_rep[len] = '\0';
+	hex_rep[leng] = '\0';
 	rev_hex = reverse_string(hex_rep);
 	if (rev_hex == NULL)
 		return (-1);
 	write_base(rev_hex);
 	free(hex_rep);
 	free(rev_hex);
-	return (len);
+	return (leng);
 }
