@@ -20,7 +20,7 @@ int print_hex(va_list l)
 		return (_putchar('0'));
 	if (num < 1)
 		return (-1);
-	len = base_len(num, 16);
+	len = len(num, 16);
 	hex_rep = malloc(sizeof(char) * len +1);
 	if (hex_rep == NULL)
 		return (-1);
