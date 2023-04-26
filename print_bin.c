@@ -9,7 +9,7 @@
 int print_bin(va_list list)
 {
 	unsigned int num;
-	int i, len;
+	int i, leng;
 	char *str;
 	char *rev_str;
 
@@ -18,8 +18,8 @@ int print_bin(va_list list)
 		return (_putchar('0'));
 	if (num < 1)
 		return (-1);
-	len = len(num, 2);
-	str = malloc(sizeof(char) * len + 1);
+	leng = len(num, 2);
+	str = malloc(sizeof(char) * leng + 1);
 	if (str == NULL)
 		return (-1);
 	
@@ -38,5 +38,5 @@ int print_bin(va_list list)
 	write_base(rev_str);
 	free(str);
 	free(rev_str);
-	return (len);
+	return (leng);
 }
