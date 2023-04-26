@@ -29,7 +29,7 @@ int print_HEX(va_list l)
 		if (rem_num > 9)
 		{
 			rem_num = hex_check(rem_num, 'X');
-			hex_rep[len] = rem_num;
+			hex_rep[leng] = rem_num;
 		}
 		else
 			hex_rep[leng] = rem_num + 48;
