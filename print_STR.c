@@ -50,7 +50,7 @@ int is_non_alpha_num(char c)
  * Return: result string
  */
 
-char *convert(unsigned long int n, int b, int l)
+char *convert(unsigned long int n, int b, int lc)
 {
 	static char *rep;
 	static char buffer[50];
@@ -60,11 +60,11 @@ char *convert(unsigned long int n, int b, int l)
 		? "0123456789abcdef"
 		: "0123456789ABCDEF";
 	p = &buffer[49];
-	*p = NULL;
+	*p = NUL;
 	do {
 		*--p = rep[n % b];
 		n /= b;
-	}while (num);
+	}while (n);
 
 	return (p);
 }
