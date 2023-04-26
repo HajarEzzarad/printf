@@ -15,7 +15,7 @@ int print_rot13(va_list l)
 	s = va_arg(l, char *);
 	if (s == NULL)
 		return (-1);
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; j <= 52; j++)
 		{
