@@ -38,7 +38,7 @@ int print_number(va_list ar)
 	{
 		len += _putchar('0' + num / d);
 		num %= d;
-		d / 10;
+		d /= 10;
 	}
 	return (len);
 }
