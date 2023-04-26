@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int print_char;
+	int printed_chars;
 	conver_t list[] = {
 		{"%", print_per},
 		{"i", print_int},
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_start(argl, format);
-	print_char = format_receiver(format, list, argl);
+	printed_chars = format_receiver(format, list, argl);
 	va_end(argl);
-	return (print_char);
+	return (printed_chars);
 }
