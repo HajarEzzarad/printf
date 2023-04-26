@@ -31,7 +31,7 @@ int print_unsigned_number(unsigned int n)
 
 	num = n;
 
-	for (; div != 0; )
+	for (; d != 0; )
 	{
 		len += _putchar('0' + num / d);
 		num %= d;
